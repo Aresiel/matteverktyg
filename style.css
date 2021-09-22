@@ -82,3 +82,21 @@ input[type="text"]:focus {
 button {
     font-size: 1em;
 }
+
+.strongSuggestion::placeholder {
+    color: black;
+    opacity: 1;
+}
+
+.strongSuggestion:focus::placeholder {
+    color: black;
+    opacity: 0;
+}
+
+p {
+    word-wrap: break-word;
+}
+
+details {
+    overflow-wrap: anywhere;
+}

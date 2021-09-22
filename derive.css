@@ -1,3 +1,4 @@
-#deriveButton {
-    font-size: 1em;
+#calculator {
+    width: min(50em, 90vw);
+    height: min(50em, 30vh);
 }

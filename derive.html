@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="derive.css">
 
+    <script src="https://www.desmos.com/api/v1.6/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
     <script src="mathjs.js"></script>
     <script src="derive.js" defer></script>
 </head>
@@ -20,7 +21,8 @@
     <h1>Derivera en funktion</h1>
 
     <label>f(x) = </label><input type="text" placeholder="2^x" id="funcInput"><br>
-    <label>x = </label><input type="text" placeholder="3" id="xInput">
+    <label>x = </label><input type="text" placeholder="3" id="xInput"><br>
+    <label>Noggrannhet: </label><input class="strongSuggestion" type="text" placeholder="30" id="precisionInput">
     <p>Variablerna <code>h</code> och <code>x</code> är tillgängliga.</p>
     <button id="deriveButton">Derivera</button>
     <br><br>
@@ -30,8 +32,10 @@
         Högerderivata: <span id="rightderiv"></span><br>
         <br>
     </p>
+    <div id="calculator"></div>
+    <br>
     <details>
-        <summary>Detaljer</summary>
+        <summary>Tabell</summary>
         <table id="derivTable">
             <tr>
                 <th>|h|</th>
