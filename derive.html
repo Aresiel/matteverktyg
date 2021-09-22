@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Matte Verktyg - Derivera</title>
+
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="derive.css">
+
+    <script src="mathjs.js"></script>
+    <script src="derive.js" defer></script>
+</head>
+<body>
+<script src="navbar.js"></script>
+<main>
+    <h1>Derivera en funktion</h1>
+
+    <label>f(x) = </label><input type="text" placeholder="2^x" id="funcInput"><br>
+    <label>x = </label><input type="text" placeholder="3" id="xInput">
+    <p>Variablerna <code>h</code> och <code>x</code> är tillgängliga.</p>
+    <button id="deriveButton">Derivera</button>
+    <br><br>
+    <p>
+        Derivata: <span id="deriv"></span><br>
+        Vänsterderivata: <span id="leftderiv"></span><br>
+        Högerderivata: <span id="rightderiv"></span><br>
+        <br>
+    </p>
+    <details>
+        <summary>Detaljer</summary>
+        <table id="derivTable">
+            <tr>
+                <th>|h|</th>
+                <th>f'(x)+</th>
+                <th>f'(x)-</th>
+            </tr>
+        </table>
+    </details>
+</main>
+</body>
+</html>

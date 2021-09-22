@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
+:root {
+    --blue: hsl(213, 36%, 32%);
+    --violet: hsl(276, 16%, 41%);
+    --rose: hsl(347, 35%, 55%);
+    --candy: hsl(358, 70%, 66%);
+    --tumbleweed: hsl(21, 69%, 73%);
+}
+
+* {
+    font-family: 'Noto Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    background-color: var(--violet);
+    text-align: center;
+    justify-content: left;
+}
+
+nav > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+nav {
+    height: 4em;
+}
+
+nav > ul > li {
+    height: 100%;
+}
+
+nav > ul > li > a {
+    color: white;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1.5em 0 1.5em;
+}
+
+nav > ul > li > a:hover {
+    color: var(--tumbleweed);
+    background-color: var(--blue);
+}
+
+main {
+    margin: 2em;
+}
+
+code {
+    font-family: 'Courier Prime', monospace;
+    font-size: 1.2em;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+input[type="text"] {
+    font-size: 1.2em;
+    border-style: none none solid none;
+    border-width: 2px;
+    border-color: lightgrey;
+    font-family: 'Courier Prime', monospace;
+}
+
+input[type="text"]:focus {
+    border-color: lightskyblue;
+    outline: none;
+}
+
+button {
+    font-size: 1em;
+}
