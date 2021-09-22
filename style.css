@@ -89,7 +89,6 @@ button {
 }
 
 .strongSuggestion:focus::placeholder {
-    color: black;
     opacity: 0;
 }
 
