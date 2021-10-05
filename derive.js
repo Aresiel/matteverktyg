@@ -35,7 +35,7 @@ document.getElementById("deriveButton").addEventListener("click", evt => {
     let x = xInput.value ? xInput.value : xInput.placeholder
 
     let count = 0;
-    for (i = 1; i >= +`1e-${precision-10}`; i /= 10) {
+    for (let i = 1; i >= +`1e-${precision-10}`; i /= 10) {
         rightResults[count] = [i, derive(func, i, x)]
         leftResults[count] = [i, derive(func, -i, x)]
         count++
@@ -69,7 +69,6 @@ document.getElementById("deriveButton").addEventListener("click", evt => {
     console.log(funcTex)
     calc.setExpression({ id: 'function', latex: funcTex , color: Desmos.Colors.BLUE});
     if(!isNaN(Number(Deriv))){
-        let tangentTex = "y=" + math.parse(rightDeriv + "x").toTex().replaceAll("~","")
         calc.setExpression({ id: 'tangent', latex: `y=\\left(${Deriv}\\right)\\left(x-${x}\\right)+f\\left(${x}\\right)`, color: Desmos.Colors.ORANGE})
         calc.setExpression({ id: 'tangentPoint', latex: `\\left(${x},f\\left(${x}\\right)\\right)`, color: Desmos.Colors.RED, pointStyle: Desmos.Styles.CROSS})
     }
